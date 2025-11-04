@@ -148,14 +148,16 @@
 
 .lots__card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 334px);
   gap: 25px;
   list-style: none;
   margin-bottom: 30px;
+  justify-content: center;
 }
 
 .lots__card-list-item {
-  min-height: 563px;
+  width: 334px;
+  height: 563px;
   list-style: none;
 }
 
@@ -208,7 +210,7 @@
 }
 
 .lots__look-more-link {
-  margin-left: 40px;
+  margin-left: 0;
   font-size: 20px;
   border-bottom: 1px solid currentColor;
 }
@@ -217,7 +219,7 @@
   display: grid;
   grid-template-columns: 430px 1fr;
   gap: 25px;
-  padding: 181px 50px 180px;
+  padding: 180px 50px;
 }
 
 .about__column {
@@ -271,7 +273,6 @@
 
 .footer__menu {
   justify-self: center;
-  width: 164px;
 }
 
 .footer__menu-list {
