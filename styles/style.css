@@ -16,18 +16,25 @@
   justify-self: start;
 }
 
+/* Исправляем меню - добавляем точки между пунктами */
 .header__links-list {
   display: flex;
-  gap: 32px;
-  list-style: circle;
+  list-style: none;
+  gap: 0;
 }
 
 .header__links-list-item {
-  list-style: circle;
+  display: flex;
+  align-items: center;
 }
 
-.header__links-list-item_no-bullit {
-  list-style: none;
+.header__links-list-item:not(:last-child)::after {
+  content: "•";
+  margin: 0 16px;
+}
+
+.header__links-list-item_no-bullit::after {
+  content: none;
 }
 
 .header__link {
@@ -75,7 +82,7 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
   font-size: 100px;
   font-weight: bold;
   text-transform: uppercase;
@@ -115,7 +122,7 @@
   justify-content: end;
   align-items: center;
   gap: 78px;
-  margin-top: 127px;
+  margin-top: 115px;
 }
 
 .cover__description-text {
@@ -146,9 +153,9 @@
   text-transform: uppercase;
 }
 
+/* Исправляем карточки - 3 в ряд через flex */
 .lots__card-list {
-  display: grid;
-  grid-template-columns: repeat(3, 334px);
+  display: flex;
   gap: 25px;
   list-style: none;
   margin-bottom: 30px;
@@ -158,6 +165,7 @@
 .lots__card-list-item {
   width: 334px;
   height: 563px;
+  flex-shrink: 0;
   list-style: none;
 }
 
@@ -219,13 +227,13 @@
   display: grid;
   grid-template-columns: 430px 1fr;
   gap: 25px;
-  padding: 180px 50px;
+  padding: 146px 50px 180px;
 }
 
 .about__column {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 }
 
 .about__logo {
@@ -243,8 +251,7 @@
 }
 
 .about__title {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 0 0 100px 0;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -276,8 +283,11 @@
 }
 
 .footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
   list-style: none;
-  text-align: center;
 }
 
 .footer__menu-list-item {
