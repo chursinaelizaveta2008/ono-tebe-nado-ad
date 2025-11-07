@@ -11,7 +11,7 @@
 
 .header__links-list {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   list-style: none;
 }
 
@@ -19,10 +19,21 @@
   position: relative;
 }
 
+.header__links-list-item_no-bullit {
+  list-style: none;
+}
+
 .header__links-list-item:not(.header__links-list-item_no-bullit)::before {
-  content: "•";
+  content: "";
   position: absolute;
   left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 .header__link {
@@ -63,6 +74,11 @@
   border-bottom: 1px solid currentColor;
 }
 
+.cover {
+  width: 1100;
+  height: 757;
+}
+
 .cover__title {
   position: relative;
   z-index: 2;
@@ -82,12 +98,12 @@
 
 .aligned-text_center {
   text-align: center;
-  margin-left: 60px;
+  margin-left: 30px;
 }
 
 .aligned-text_right {
   text-align: right;
-  margin-right: 30px;
+  margin-right: 0;
 }
 
 .cover {
@@ -133,7 +149,7 @@
 }
 
 .lots {
-  padding: 180px 50px;
+  padding: 180px 20px;
 }
 
 .lots__heading {
@@ -169,7 +185,7 @@
   justify-content: space-between;
   min-height: 450px;
   height: 100%;
-  padding: 50px 40px;
+  padding: 30px 40px;
   background-size: cover;
   background-position: center;
 }
@@ -220,8 +236,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto;
   border-radius: 50%;
   background-color: black;
@@ -243,7 +259,10 @@
   flex-direction: column;
   gap: 25px;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 24px;
+  font-family: Raleway;
+  font-weight: 400;
+  letter-spacing: 0%;
 }
 
 .footer {
@@ -272,7 +291,7 @@
 }
 
 .footer__menu-list-item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .footer__menu-link {
